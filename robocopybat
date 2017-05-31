@@ -1,0 +1,21 @@
+@ECHO OFF
+SETLOCAL
+ 
+SET _source=D:\Music\
+ 
+SET _dest=E:\MusicBackup\
+ 
+SET _what=/COPYALL /B /SEC /MIR
+:: /COPYALL :: COPY ALL file info
+:: /B :: copy files in Backup mode. 
+:: /SEC :: copy files with SECurity
+:: /MIR :: MIRror a directory tree 
+ 
+SET _options=/R:5 /W:2 /LOG:music-backup.log /V
+:: /R:n :: number of Retries
+:: /W:n :: Wait time between retries
+:: /LOG :: Output log file
+:: /NFL :: No file logging
+:: /NDL :: No dir logging 
+ 
+ROBOCOPY %_source% %_dest% %_what% %_options%
