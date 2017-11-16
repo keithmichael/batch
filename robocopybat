@@ -1,9 +1,9 @@
 @ECHO OFF
 SETLOCAL
  
-SET _source=D:\Music\
+SET _source=D:\Data\
  
-SET _dest=E:\MusicBackup\
+SET _dest=Z:\Backup\
  
 SET _what=/COPYALL /B /SEC /MIR
 :: /COPYALL :: COPY ALL file info
@@ -11,7 +11,7 @@ SET _what=/COPYALL /B /SEC /MIR
 :: /SEC :: copy files with SECurity
 :: /MIR :: MIRror a directory tree 
  
-SET _options=/R:5 /W:2 /LOG:music-backup.log /V
+SET _options=/R:5 /W:2 /LOG:backup.log /V
 :: /R:n :: number of Retries
 :: /W:n :: Wait time between retries
 :: /LOG :: Output log file
